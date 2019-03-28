@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class person {
+class Person {
 	
 	private:
 	
@@ -16,6 +16,23 @@ class person {
 		
 	
 	public:
+	
+		Person(){
+			name = "unknown";
+			gender = "M";
+			race = "ugly";
+		}
+		
+		Person(string n, string g, string r){
+			name = n;
+			gender = g;
+			race = r;
+		}
+	
+		string getStats(){
+			return "Name: " + name + "\n" + "  Gender: " + gender + "\n" + "  Race: " + race;
+		}
+		
 	
 		string getName(){return name; }
 		string getGender(){return gender;}
