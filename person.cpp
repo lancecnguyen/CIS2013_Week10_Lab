@@ -18,15 +18,17 @@ class Person {
 	public:
 	
 		Person(){
-			name = "unknown";
-			gender = "M";
-			race = "ugly";
+			setName("unknown");
+			setGender("M");
+			setRace("ugly");
+			setAge(age);
 		}
 		
 		Person(string n, string g, string r){
-			name = n;
-			gender = g;
-			race = r;
+			setName(n);
+			setGender(g);
+			setRace(r);
+			setAge(age)
 		}
 	
 		string getStats(){
@@ -53,7 +55,11 @@ class Person {
 		}
 		
 		void setAge (int a){
-			age = a;
+			
+			if((0 > a) || (150 < a)){
+				age = 25;
+			} else {
+				age = a;
 		}
 		
 		void setAlive (bool a){
